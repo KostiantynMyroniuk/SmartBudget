@@ -1,0 +1,6 @@
+@SmartBudget.CategoriesService.API_HostAddress = http://localhost:5192
+
+GET {{SmartBudget.CategoriesService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
