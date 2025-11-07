@@ -1,24 +1,17 @@
-using DotNetEnv;
+using SmartBudget.CategoriesService.Application.Configuration;
 using SmartBudget.CategoriesService.Infrastructure.Persistance.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddOpenApi();
+builder.Services.AddInfrastructureLayer(builder.Configuration);
 
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplicationLayer();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

@@ -15,7 +15,7 @@ namespace SmartBudget.TransactionsService.Application.Configuration
 {
     public static class ApplicationInjection
     {
-        public static IServiceCollection AddApplication(this IServiceCollection services)
+        public static IServiceCollection AddApplicationLayer(this IServiceCollection services)
         {
             services.AddScoped<ITransactionService, TransactionService>();
 

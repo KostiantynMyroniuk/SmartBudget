@@ -14,7 +14,7 @@ namespace SmartBudget.TransactionsService.Infrastructure.Persistance.Configurati
 {
     public static class InfrastructureInjection
     {
-        public static IServiceCollection AddInfrasctructure(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddInfrasctructureLayer(this IServiceCollection services, IConfiguration config)
         {
 
             services.AddDbContext<TransactionDbContext>(options =>

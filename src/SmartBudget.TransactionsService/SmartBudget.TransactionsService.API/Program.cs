@@ -5,22 +5,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddOpenApi();
+builder.Services.AddInfrasctructureLayer(builder.Configuration);
 
-builder.Services.AddInfrasctructure(builder.Configuration);
-
-builder.Services.AddApplication();
+builder.Services.AddApplicationLayer();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 
