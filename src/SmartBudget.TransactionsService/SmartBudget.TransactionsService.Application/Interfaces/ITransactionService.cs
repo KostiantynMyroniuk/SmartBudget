@@ -1,4 +1,5 @@
-﻿using SmartBudget.TransactionsService.Domain.Entities;
+﻿using SmartBudget.TransactionsService.Application.DTOs;
+using SmartBudget.TransactionsService.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace SmartBudget.TransactionsService.Application.Interfaces
 {
     public interface ITransactionService
     {
-        Task Add(Transaction transaction);
+        Task Add(TransactionDto transactionDto);
         Task Delete(int id);
-        Task<IEnumerable<Transaction>> GetAll();
-        Task<Transaction?> GetById(int id);
+        Task<IEnumerable<TransactionDto>> GetAll();
+        Task<TransactionDto?> GetById(int id);
     }
 }

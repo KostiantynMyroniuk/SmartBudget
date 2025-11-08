@@ -44,6 +44,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{BE14
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBudget.Gateway", "src\Gateway\SmartBudget.Gateway\SmartBudget.Gateway.csproj", "{897191A8-83B2-4714-8A41-6C09053F750C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D98B4048-ADAE-4692-8A8D-1B0EBECBF318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBudget.Transactions.SharedContracts", "src\Shared\SmartBudget.Transactions.Contracts\SmartBudget.Transactions.SharedContracts.csproj", "{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +106,10 @@ Global
 		{897191A8-83B2-4714-8A41-6C09053F750C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{897191A8-83B2-4714-8A41-6C09053F750C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{897191A8-83B2-4714-8A41-6C09053F750C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,6 +132,8 @@ Global
 		{12D07704-921E-42F0-B567-A6B3B2B1ED77} = {E53A5E07-BBF3-421A-A24A-B2E0E20061C9}
 		{BE148F88-3158-4E24-B0CC-BE9227E8C2A3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{897191A8-83B2-4714-8A41-6C09053F750C} = {BE148F88-3158-4E24-B0CC-BE9227E8C2A3}
+		{D98B4048-ADAE-4692-8A8D-1B0EBECBF318} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2} = {D98B4048-ADAE-4692-8A8D-1B0EBECBF318}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {071739AA-0CDF-4F69-9031-40A8701220C2}

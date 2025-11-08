@@ -1,4 +1,5 @@
-﻿using SmartBudget.TransactionsService.Application.Interfaces;
+﻿using SmartBudget.TransactionsService.Application.DTOs;
+using SmartBudget.TransactionsService.Application.Interfaces;
 using SmartBudget.TransactionsService.Domain.Entities;
 using SmartBudget.TransactionsService.Domain.Interfaces;
 using SmartBudget.TransactionsService.Infrastructure.Persistance.Repositories;
@@ -19,13 +20,12 @@ namespace SmartBudget.TransactionsService.Application.Services
             _repository = repository;
         }
 
-        public async Task Add(Transaction transaction)
+        public async Task Add(TransactionDto transactionDto)
         {
+            if (transactionDto.Amount == 0)
+                throw new ArgumentException("Amount can`t be 0", nameof(transactionDto.Amount));
 
-            if (transaction.Amount == 0)
-                throw new ArgumentException("Amount can`t be 0", nameof(transaction.Amount));
-
-            await _repository.Add(transaction);
+            await _repository.Add(transactionDto.MapToEntity());
         }
 
         public async Task Delete(int id)
@@ -38,14 +38,18 @@ namespace SmartBudget.TransactionsService.Application.Services
                 throw new KeyNotFoundException($"Transaction with id: {id} not found");
         }
 
-        public async Task<IEnumerable<Transaction>> GetAll()
+        public async Task<IEnumerable<TransactionDto>> GetAll()
         {
-            return await _repository.GetAll();
+            var trans = await _repository.GetAll();
+
+            return trans.MapToDto();
         }
 
-        public async Task<Transaction?> GetById(int id)
+        public async Task<TransactionDto?> GetById(int id)
         {
-            return await _repository.GetById(id);
+            var transaction = await _repository.GetById(id);
+
+            return transaction!.MapToDto();
         }
     }
 }

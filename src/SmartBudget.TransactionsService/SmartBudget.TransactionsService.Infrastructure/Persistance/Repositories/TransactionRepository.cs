@@ -16,7 +16,6 @@ namespace SmartBudget.TransactionsService.Infrastructure.Persistance.Repositorie
 
         public TransactionRepository(TransactionDbContext context) => _context = context;
          
-
         public async Task Add(Transaction transaction)
         {
             await _context.Transactions.AddAsync(transaction);

@@ -14,4 +14,8 @@
     <PackageReference Include="Ocelot" Version="24.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\SmartBudget.Transactions.Contracts\SmartBudget.Transactions.SharedContracts.csproj" />
+  </ItemGroup>
+
 </Project>
