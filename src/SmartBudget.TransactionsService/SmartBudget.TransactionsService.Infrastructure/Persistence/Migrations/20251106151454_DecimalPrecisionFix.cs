@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace SmartBudget.TransactionsService.Infrastructure.Persistance.Migrations
+namespace SmartBudget.TransactionsService.Infrastructure.Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class DecimalPrecisionFix : Migration

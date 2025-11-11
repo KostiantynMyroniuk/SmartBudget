@@ -2,15 +2,15 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SmartBudget.CategoriesService.Domain.Interfaces;
-using SmartBudget.CategoriesService.Infrastructure.Persistance.Contexts;
-using SmartBudget.CategoriesService.Infrastructure.Persistance.Repositories;
+using SmartBudget.CategoriesService.Infrastructure.Persistence.Contexts;
+using SmartBudget.CategoriesService.Infrastructure.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartBudget.CategoriesService.Infrastructure.Persistance.Configuration
+namespace SmartBudget.CategoriesService.Infrastructure.Persistence.Configuration
 {
     public static class InfrastructureInjection
     {

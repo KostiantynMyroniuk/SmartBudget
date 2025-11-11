@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartBudget.CategoriesService.Infrastructure.Persistance.Contexts
+namespace SmartBudget.CategoriesService.Infrastructure.Persistence.Contexts
 {
     public class CategoryDbContext : DbContext
     {

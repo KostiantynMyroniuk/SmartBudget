@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartBudget.CategoriesService.Domain.Entities;
 using SmartBudget.CategoriesService.Domain.Interfaces;
-using SmartBudget.CategoriesService.Infrastructure.Persistance.Contexts;
+using SmartBudget.CategoriesService.Infrastructure.Persistence.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartBudget.CategoriesService.Infrastructure.Persistance.Repositories
+namespace SmartBudget.CategoriesService.Infrastructure.Persistence.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
@@ -22,9 +22,11 @@ namespace SmartBudget.CategoriesService.Infrastructure.Persistance.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task Delete(Category category)
+        public async Task Delete(int id)
         {
-            _context.Categories.Remove(category);
+            var category = await _context.Categories.FindAsync(id);
+
+            _context.Categories.Remove(category!);
             await _context.SaveChangesAsync();
         }
 

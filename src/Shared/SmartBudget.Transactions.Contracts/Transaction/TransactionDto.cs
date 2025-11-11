@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartBudget.TransactionsService.Application.DTOs
+namespace SmartBudget.SharedContracts.Transaction
 {
     public class TransactionDto
     {

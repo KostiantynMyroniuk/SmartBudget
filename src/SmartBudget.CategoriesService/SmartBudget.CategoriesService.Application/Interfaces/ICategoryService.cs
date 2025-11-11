@@ -1,4 +1,5 @@
 ﻿using SmartBudget.CategoriesService.Domain.Entities;
+using SmartBudget.Transactions.SharedContracts.Category;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace SmartBudget.CategoriesService.Domain.Interfaces
 {
     public interface ICategoryService
     {
-        Task Add(Category category);
+        Task Add(CategoryDto categoryDto);
         Task Delete(int id);
-        Task<IEnumerable<Category>> GetAll();
-        Task<Category?> GetById(int id);
+        Task<IEnumerable<CategoryDto>> GetAll();
+        Task<CategoryDto?> GetById(int id);
     }
 }

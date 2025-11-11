@@ -1,4 +1,4 @@
-﻿using SmartBudget.TransactionsService.Application.DTOs;
+﻿using SmartBudget.SharedContracts.Transaction;
 using SmartBudget.TransactionsService.Domain.Entities;
 using System;
 using System.Collections.Generic;

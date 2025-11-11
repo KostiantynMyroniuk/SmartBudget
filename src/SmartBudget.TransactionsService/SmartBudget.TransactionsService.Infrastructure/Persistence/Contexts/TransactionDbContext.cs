@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartBudget.TransactionsService.Infrastructure.Persistance.Contexts
+namespace SmartBudget.TransactionsService.Infrastructure.Persistence.Contexts
 {
     public class TransactionDbContext : DbContext
     {

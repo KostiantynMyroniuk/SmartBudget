@@ -1,8 +1,8 @@
-﻿using SmartBudget.TransactionsService.Application.DTOs;
+﻿using SmartBudget.SharedContracts.Transaction;
 using SmartBudget.TransactionsService.Application.Interfaces;
 using SmartBudget.TransactionsService.Domain.Entities;
 using SmartBudget.TransactionsService.Domain.Interfaces;
-using SmartBudget.TransactionsService.Infrastructure.Persistance.Repositories;
+using SmartBudget.TransactionsService.Infrastructure.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +49,11 @@ namespace SmartBudget.TransactionsService.Application.Services
         {
             var transaction = await _repository.GetById(id);
 
-            return transaction!.MapToDto();
+            if (transaction != null)
+                return transaction.MapToDto();
+            else
+                throw new KeyNotFoundException($"Transaction with id: {id} not found");
+
         }
     }
 }

@@ -1,5 +1,5 @@
 using SmartBudget.CategoriesService.Application.Configuration;
-using SmartBudget.CategoriesService.Infrastructure.Persistance.Configuration;
+using SmartBudget.CategoriesService.Infrastructure.Persistence.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 

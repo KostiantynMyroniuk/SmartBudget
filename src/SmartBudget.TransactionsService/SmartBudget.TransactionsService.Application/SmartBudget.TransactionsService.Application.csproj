@@ -7,17 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\SmartBudget.Transactions.Contracts\SmartBudget.Transactions.SharedContracts.csproj" />
+    <ProjectReference Include="..\..\Shared\SmartBudget.Transactions.Contracts\SmartBudget.SharedContracts.csproj" />
     <ProjectReference Include="..\SmartBudget.TransactionsService.Domain\SmartBudget.TransactionsService.Domain.csproj" />
     <ProjectReference Include="..\SmartBudget.TransactionsService.Infrastructure\SmartBudget.TransactionsService.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DTOs\" />
   </ItemGroup>
 
 </Project>

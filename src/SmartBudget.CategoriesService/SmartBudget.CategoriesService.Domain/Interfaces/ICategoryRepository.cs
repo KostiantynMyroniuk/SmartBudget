@@ -10,7 +10,7 @@ namespace SmartBudget.CategoriesService.Domain.Interfaces
     public interface ICategoryRepository
     {
         Task Add(Category category);
-        Task Delete(Category category);
+        Task Delete(int id);
         Task<IEnumerable<Category>> GetAll();
         Task<Category?> GetById(int id);
         Task<bool> ExistByName(string name);

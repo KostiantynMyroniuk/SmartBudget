@@ -3,17 +3,20 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SmartBudget.TransactionsService.Infrastructure.Persistance.Contexts;
+using SmartBudget.TransactionsService.Infrastructure.Persistence.Contexts;
 
 #nullable disable
 
-namespace SmartBudget.TransactionsService.Infrastructure.Persistance.Migrations
+namespace SmartBudget.TransactionsService.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(TransactionDbContext))]
-    partial class TransactionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251106151454_DecimalPrecisionFix")]
+    partial class DecimalPrecisionFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

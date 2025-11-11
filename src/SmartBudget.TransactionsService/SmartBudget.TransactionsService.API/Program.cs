@@ -1,5 +1,5 @@
 using SmartBudget.TransactionsService.Application.Configuration;
-using SmartBudget.TransactionsService.Infrastructure.Persistance.Configuration;
+using SmartBudget.TransactionsService.Infrastructure.Persistence.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 

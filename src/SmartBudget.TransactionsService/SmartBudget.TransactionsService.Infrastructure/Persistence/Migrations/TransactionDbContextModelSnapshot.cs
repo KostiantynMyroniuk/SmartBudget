@@ -3,20 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SmartBudget.TransactionsService.Infrastructure.Persistance.Contexts;
+using SmartBudget.TransactionsService.Infrastructure.Persistence.Contexts;
 
 #nullable disable
 
-namespace SmartBudget.TransactionsService.Infrastructure.Persistance.Migrations
+namespace SmartBudget.TransactionsService.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(TransactionDbContext))]
-    [Migration("20251101114550_InitialMigration")]
-    partial class InitialMigration
+    partial class TransactionDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,6 +31,7 @@ namespace SmartBudget.TransactionsService.Infrastructure.Persistance.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("CategoryId")

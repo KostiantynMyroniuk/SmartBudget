@@ -46,7 +46,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBudget.Gateway", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D98B4048-ADAE-4692-8A8D-1B0EBECBF318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBudget.Transactions.SharedContracts", "src\Shared\SmartBudget.Transactions.Contracts\SmartBudget.Transactions.SharedContracts.csproj", "{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBudget.SharedContracts", "src\Shared\SmartBudget.Transactions.Contracts\SmartBudget.SharedContracts.csproj", "{6D40F05E-D0E6-41A1-A6C6-73D023A45FD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

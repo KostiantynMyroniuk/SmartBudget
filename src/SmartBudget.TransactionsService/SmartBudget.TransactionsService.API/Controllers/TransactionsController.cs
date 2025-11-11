@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SmartBudget.TransactionsService.Application.DTOs;
+using SmartBudget.SharedContracts.Transaction;
 using SmartBudget.TransactionsService.Application.Interfaces;
 using SmartBudget.TransactionsService.Domain.Entities;
 

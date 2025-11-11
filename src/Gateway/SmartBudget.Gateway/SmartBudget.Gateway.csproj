@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\SmartBudget.Transactions.Contracts\SmartBudget.Transactions.SharedContracts.csproj" />
+    <ProjectReference Include="..\..\Shared\SmartBudget.Transactions.Contracts\SmartBudget.SharedContracts.csproj" />
   </ItemGroup>
 
 </Project>
