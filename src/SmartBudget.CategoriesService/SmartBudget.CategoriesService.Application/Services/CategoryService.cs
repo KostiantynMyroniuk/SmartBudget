@@ -1,7 +1,7 @@
 ﻿using SmartBudget.CategoriesService.Domain.Entities;
 using SmartBudget.CategoriesService.Domain.Interfaces;
 using SmartBudget.CategoriesService.Infrastructure.Persistence;
-using SmartBudget.Transactions.SharedContracts.Category;
+using SmartBudget.SharedContracts.Category;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,5 @@
 ﻿using SmartBudget.CategoriesService.Domain.Entities;
-using SmartBudget.Transactions.SharedContracts.Category;
+using SmartBudget.SharedContracts.Category;
 using System;
 using System.Collections.Generic;
 using System.Linq;

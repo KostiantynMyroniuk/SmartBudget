@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartBudget.Transactions.SharedContracts.Category
+namespace SmartBudget.SharedContracts.Category
 {
     public class CategoryDto
     {

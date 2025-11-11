@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\SmartBudget.Transactions.Contracts\SmartBudget.SharedContracts.csproj" />
+    <ProjectReference Include="..\..\Shared\SmartBudget.SharedContracts\SmartBudget.SharedContracts.csproj" />
     <ProjectReference Include="..\SmartBudget.CategoriesService.Domain\SmartBudget.CategoriesService.Domain.csproj" />
     <ProjectReference Include="..\SmartBudget.CategoriesService.Infrastructure\SmartBudget.CategoriesService.Infrastructure.csproj" />
   </ItemGroup>
