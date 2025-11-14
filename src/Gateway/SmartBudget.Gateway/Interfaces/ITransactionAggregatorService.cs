@@ -4,6 +4,6 @@ namespace SmartBudget.Gateway.Interfaces
 {
     public interface ITransactionAggregatorService
     {
-        Task<IEnumerable<EnrichedTransactionDto>> GetEnrichedTransactions();
+        Task<IEnumerable<EnrichedTransactionDto>> GetEnrichedTransactions(CancellationToken cancellationToken = default);
     }
 }

@@ -1,5 +1,7 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using SmartBudget.Gateway.Interfaces;
+using SmartBudget.Gateway.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +11,15 @@ builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange
 
 builder.Services.AddOcelot();
 
+builder.Services.AddHttpClient();
+
+builder.Services.AddScoped<ITransactionAggregatorService, TransactionAggregatorService>();
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
 
 app.MapControllers();
 

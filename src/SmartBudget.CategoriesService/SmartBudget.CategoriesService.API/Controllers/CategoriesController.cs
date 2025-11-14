@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartBudget.CategoriesService.Domain.Interfaces;
+using SmartBudget.SharedContracts.Category;
+
 
 namespace SmartBudget.CategoriesService.API.Controllers
 {
@@ -15,6 +17,19 @@ namespace SmartBudget.CategoriesService.API.Controllers
             _service = service;
         }
 
+        [HttpGet]
+        public async Task<ActionResult<List<CategoryDto>>> GetAll()
+        {
+            var categories = await _service.GetAll();
+            return Ok(categories);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(CategoryDto categoryDto)
+        {
+            await _service.Add(categoryDto);
+            return Created();
+        }
         
-    }
+    } 
 }

@@ -55,6 +55,19 @@
                     "Port": 7002
                 }
             ]
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/enriched-transactions",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DownstreamPathTemplate": "/api/enriched-transactions",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5000
+                }
+            ]
         }
 
     ]

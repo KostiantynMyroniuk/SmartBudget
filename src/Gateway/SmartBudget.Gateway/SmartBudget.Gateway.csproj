@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <PackageReference Include="Ocelot" Version="24.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ocelot" Version="24.0.1" />
+    <ProjectReference Include="..\..\Shared\SmartBudget.SharedContracts\SmartBudget.SharedContracts.csproj" />
   </ItemGroup>
 
 </Project>

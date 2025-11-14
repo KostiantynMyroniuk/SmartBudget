@@ -33,7 +33,7 @@ namespace SmartBudget.CategoriesService.Infrastructure.Persistence.Repositories
         public async Task<bool> ExistByName(string name)
         {
             return await _context.Categories
-                .AnyAsync(x=> x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+                .AnyAsync(x => EF.Functions.Like(x.Name, name));
         }
 
         public async Task<IEnumerable<Category>> GetAll()
